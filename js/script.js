@@ -100,6 +100,8 @@ app.startAnimation = function(slideNum) {
         animateThirdSlide();
     } else if (slideNum === 4) {
         animateFourthSlide();
+    } else if (slideNum === 5) {
+        animateFifthSlide();
     }
 }
 
@@ -114,18 +116,38 @@ app.resizeGallery = function(){
 var animateSecondSlide = function(){
     $('.second-slide .black-band').css({'bottom': '100%'});
     $('.second-slide .black-band').animate({'bottom': '0'}, 1000);
+    $('.second-slide .iphone').css({'left': '-100%'});
+    $('.second-slide .iphone').animate({'left': '0'}, 1000);
 }
 
 var animateThirdSlide = function(){
     $('.third-slide .black-band').css({'bottom': '100%'});
     $('.third-slide .black-band').animate({'bottom': '0'}, 1000);
+    $('.third-slide .iphone').css({'left': '-100%'});
+    $('.third-slide .iphone').animate({'left': '50%'}, 1000);
 }
 
 var animateFourthSlide = function(){
     $('.image-gallery-slide .black-band').css({'bottom': '100%'});
     $('.image-gallery-slide .black-band').animate({'bottom': '0'}, 1000);
+    $('.image-gallery-slide .iphone').css({'right': '-100%'});
+    $('.image-gallery-slide .iphone').animate({'right': '0'}, 1000);
 }
 
+var animateFifthSlide = function(){
+    console.log('animated fifth slide');
+    $('.last-slide .social-icons').addClass('animated bounceInDown');
+    
+    setTimeout(function(){
+        $('.last-slide .social-icons').removeClass('animated bounceInDown');
+        $('.last-slide .download-link').addClass('animated pulse');
+        
+    }, 1000);
+
+    setTimeout(function(){
+        $('.last-slide .download-link').removeClass('animated pulse');
+    }, 2000);
+}
 
 
 $(window).scroll(function(){

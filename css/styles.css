@@ -171,25 +171,49 @@ h2 {
 .last-slide {
   text-align: center;
 }
-/* line 161, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
+.last-slide .restrict-width {
+  display: table;
+}
+/* line 163, ../sass/styles.scss */
+.last-slide .content {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 167, ../sass/styles.scss */
 .last-slide h2 {
   color: #ffff33;
+  margin: 1em auto 0.5em;
 }
-/* line 164, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
+.last-slide .download-link {
+  margin-bottom: 2em;
+}
+/* line 174, ../sass/styles.scss */
+.last-slide footer {
+  margin: 2em auto;
+}
+/* line 177, ../sass/styles.scss */
+.last-slide a {
+  color: black;
+  text-decoration: none;
+}
+/* line 181, ../sass/styles.scss */
 .last-slide .social-icons {
   text-align: center;
+  margin-bottom: 2em;
 }
-/* line 166, ../sass/styles.scss */
+/* line 184, ../sass/styles.scss */
 .last-slide .social-icons > a {
   display: inline-block;
   width: 3em;
 }
-/* line 169, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 .last-slide .social-icons > a img {
   width: 100%;
 }
 
-/* line 176, ../sass/styles.scss */
+/* line 194, ../sass/styles.scss */
 .slide-indicators {
   position: fixed;
   right: 3%;
@@ -197,7 +221,7 @@ h2 {
   z-index: 5;
   margin-top: -95px;
 }
-/* line 186, ../sass/styles.scss */
+/* line 204, ../sass/styles.scss */
 .slide-indicators a {
   display: block;
   -webkit-transition: all 0.5s;
@@ -214,7 +238,7 @@ h2 {
   border: 2px solid rgba(255, 255, 255, 0.83);
   margin: 20px 0;
 }
-/* line 194, ../sass/styles.scss */
+/* line 212, ../sass/styles.scss */
 .slide-indicators a.highlighted {
   background: rgba(255, 255, 255, 0.83);
 }
