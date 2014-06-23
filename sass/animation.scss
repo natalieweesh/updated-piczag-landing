@@ -12,3 +12,17 @@
     opacity: 0.8;
   }
 }
+@keyframes glow {
+  0% {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+  }
+  50% {
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
+  100% {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+  }
+}

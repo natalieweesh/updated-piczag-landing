@@ -1,17 +1,37 @@
 @-webkit-keyframes glow {
-  /* line 2, ../sass/animation.scss */
+  /* line 2, /Users/mba/Dropbox/piczag-updated/sass/animation.scss */
   0% {
     filter: alpha(opacity=80);
     opacity: 0.8;
   }
 
-  /* line 6, ../sass/animation.scss */
+  /* line 6, /Users/mba/Dropbox/piczag-updated/sass/animation.scss */
   50% {
     filter: alpha(opacity=100);
     opacity: 1;
   }
 
-  /* line 10, ../sass/animation.scss */
+  /* line 10, /Users/mba/Dropbox/piczag-updated/sass/animation.scss */
+  100% {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow {
+  /* line 16, /Users/mba/Dropbox/piczag-updated/sass/animation.scss */
+  0% {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+  }
+
+  /* line 20, /Users/mba/Dropbox/piczag-updated/sass/animation.scss */
+  50% {
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
+
+  /* line 24, /Users/mba/Dropbox/piczag-updated/sass/animation.scss */
   100% {
     filter: alpha(opacity=80);
     opacity: 0.8;
@@ -130,28 +150,31 @@ h2 {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-animation-name: glow;
+  animation-name: glow;
   -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3;
 }
-/* line 102, ../sass/styles.scss */
+/* line 105, ../sass/styles.scss */
 .first-slide .iphone .play-button:hover {
   filter: alpha(opacity=100) !important;
   opacity: 1!important;
 }
-/* line 108, ../sass/styles.scss */
+/* line 111, ../sass/styles.scss */
 .first-slide .restrict-width {
   display: table;
 }
-/* line 111, ../sass/styles.scss */
+/* line 114, ../sass/styles.scss */
 .first-slide h2 {
   color: white;
   margin: 0;
 }
-/* line 115, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .first-slide .download-link {
   margin-top: 3em;
 }
-/* line 118, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 .first-slide .content {
   display: table-cell;
   vertical-align: middle;
@@ -159,7 +182,7 @@ h2 {
   padding-right: 300px;
 }
 
-/* line 126, ../sass/styles.scss */
+/* line 129, ../sass/styles.scss */
 .black-band {
   position: absolute;
   z-index: 2;
@@ -167,72 +190,73 @@ h2 {
   bottom: 0;
   background: rgba(0, 0, 0, 0.9);
 }
-/* line 132, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 .black-band p {
   color: white;
   margin: 0.5em 0 2em;
 }
-/* line 136, ../sass/styles.scss */
+/* line 139, ../sass/styles.scss */
 .black-band h2 {
   color: #ff3366;
   margin: 1em 0 0;
 }
-/* line 139, ../sass/styles.scss */
+/* line 142, ../sass/styles.scss */
 .black-band h2.yellow {
   color: #ffff33;
 }
 
-/* line 145, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 .icon {
   filter: alpha(opacity=83);
   opacity: 0.83;
 }
 
-/* line 150, ../sass/styles.scss */
+/* line 153, ../sass/styles.scss */
 .second-slide {
   background: url(../img/background-slide-2.png) no-repeat center center;
   background-size: cover;
 }
-/* line 153, ../sass/styles.scss */
+/* line 156, ../sass/styles.scss */
 .second-slide .iphone {
   position: absolute;
   bottom: 20px;
   z-index: 3;
 }
-/* line 158, ../sass/styles.scss */
+/* line 161, ../sass/styles.scss */
 .second-slide table {
   margin-left: 250px;
 }
-/* line 162, ../sass/styles.scss */
+/* line 165, ../sass/styles.scss */
 .second-slide table .icon {
   width: 50%;
 }
 
-/* line 169, ../sass/styles.scss */
+/* line 172, ../sass/styles.scss */
 .image-gallery-slide .restrict-width {
   z-index: 3;
+  pointer-events: none;
 }
-/* line 172, ../sass/styles.scss */
+/* line 176, ../sass/styles.scss */
 .image-gallery-slide .iphone {
   position: absolute;
   right: 0;
   bottom: 20px;
 }
-/* line 178, ../sass/styles.scss */
+/* line 182, ../sass/styles.scss */
 .image-gallery-slide table {
   margin-right: 250px;
 }
-/* line 182, ../sass/styles.scss */
+/* line 186, ../sass/styles.scss */
 .image-gallery-slide table .icon {
   width: 50%;
 }
 
-/* line 188, ../sass/styles.scss */
+/* line 192, ../sass/styles.scss */
 .third-slide {
   background: url(../img/background-slide-3.png) no-repeat center top;
   background-size: cover;
 }
-/* line 191, ../sass/styles.scss */
+/* line 195, ../sass/styles.scss */
 .third-slide .iphone {
   position: absolute;
   z-index: 3;
@@ -240,21 +264,21 @@ h2 {
   margin-left: -95.5px;
   bottom: 20px;
 }
-/* line 198, ../sass/styles.scss */
+/* line 202, ../sass/styles.scss */
 .third-slide .icon {
   height: 50px;
 }
-/* line 201, ../sass/styles.scss */
+/* line 205, ../sass/styles.scss */
 .third-slide .iphone-padding {
   width: 250px;
 }
 
-/* line 206, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 .download-link {
   display: inline-block;
 }
 
-/* line 210, ../sass/styles.scss */
+/* line 214, ../sass/styles.scss */
 .last-slide-background {
   background: url(../img/background-teal.png) no-repeat center center;
   background-size: cover;
@@ -265,53 +289,53 @@ h2 {
   bottom: 0;
 }
 
-/* line 221, ../sass/styles.scss */
+/* line 225, ../sass/styles.scss */
 .last-slide {
   text-align: center;
 }
-/* line 223, ../sass/styles.scss */
+/* line 227, ../sass/styles.scss */
 .last-slide .restrict-width {
   display: table;
 }
-/* line 226, ../sass/styles.scss */
+/* line 230, ../sass/styles.scss */
 .last-slide .content {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 230, ../sass/styles.scss */
+/* line 234, ../sass/styles.scss */
 .last-slide h2 {
   color: #ffff33;
   margin: 1em auto 0.5em;
 }
-/* line 234, ../sass/styles.scss */
+/* line 238, ../sass/styles.scss */
 .last-slide .download-link {
   margin-bottom: 2em;
 }
-/* line 237, ../sass/styles.scss */
+/* line 241, ../sass/styles.scss */
 .last-slide footer {
   margin: 2em auto;
 }
-/* line 240, ../sass/styles.scss */
+/* line 244, ../sass/styles.scss */
 .last-slide a {
   color: black;
   text-decoration: none;
 }
-/* line 244, ../sass/styles.scss */
+/* line 248, ../sass/styles.scss */
 .last-slide .social-icons {
   text-align: center;
   margin-bottom: 2em;
 }
-/* line 247, ../sass/styles.scss */
+/* line 251, ../sass/styles.scss */
 .last-slide .social-icons > a {
   display: inline-block;
   width: 3em;
 }
-/* line 250, ../sass/styles.scss */
+/* line 254, ../sass/styles.scss */
 .last-slide .social-icons > a img {
   width: 100%;
 }
 
-/* line 257, ../sass/styles.scss */
+/* line 261, ../sass/styles.scss */
 .slide-indicators {
   position: fixed;
   right: 3%;
@@ -319,7 +343,7 @@ h2 {
   z-index: 5;
   margin-top: -95px;
 }
-/* line 267, ../sass/styles.scss */
+/* line 271, ../sass/styles.scss */
 .slide-indicators a {
   display: block;
   -webkit-transition: all 0.5s;
@@ -336,7 +360,7 @@ h2 {
   border: 2px solid rgba(255, 255, 255, 0.83);
   margin: 20px 0;
 }
-/* line 275, ../sass/styles.scss */
+/* line 279, ../sass/styles.scss */
 .slide-indicators a.highlighted {
   background: rgba(255, 255, 255, 0.83);
 }

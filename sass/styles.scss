@@ -97,8 +97,11 @@ h2 {
       opacity: 0.8;
       @include transition(all 0.5s);
       -webkit-animation-name: glow;
+      animation-name: glow;
       -webkit-animation-duration: 2s;
+      animation-duration: 2s;
       -webkit-animation-iteration-count: 3;
+      animation-iteration-count: 3;
       &:hover {
         filter: alpha(opacity=100)!important;
         opacity: 1!important;
@@ -168,6 +171,7 @@ h2 {
 .image-gallery-slide {
   .restrict-width {
     z-index: 3;
+    pointer-events: none;
   }
   .iphone {
     position: absolute;
