@@ -73,12 +73,11 @@ $(document).ready(function(){
 
     $('a', '.slide-indicators .dots').on('click', function(){
         var slideNum = $('.slide-indicators .dots a').index($(this)); //this is zero-indexed
-        console.log(slideNum);
         $('body', 'html').animate({'scrollTop': $(window).height() * slideNum});
     });
 
     $('.play-button', '.first-slide').on('click', function(){
-        $(this).hide(600);
+        $(this).hide(1000);
         app.playBigSlideshow();
 
     });
@@ -157,7 +156,6 @@ var animateFourthSlide = function(){
 }
 
 var animateFifthSlide = function(){
-    console.log('animated fifth slide');
     $('.last-slide .social-icons').addClass('animated bounceInDown');
     
     setTimeout(function(){
@@ -188,7 +186,7 @@ app.playBigSlideshow = function(){
         if (nextSlide >= numOfSlides) {
             clearTimeout(slideshowPlaying);
             setTimeout(function(){
-                $('.first-slide .play-button').show(600);
+                $('.first-slide .play-button').show(1000);
             }, slideshowSpeed);
         }
     }, slideshowSpeed);
@@ -215,7 +213,7 @@ $(window).scroll(function(){
     currentSlide = getCurrentSlide();
     if (currentSlide !== app.previousSlide) {
 
-        console.log('slide changed to ' + currentSlide);
+        //console.log('slide changed to ' + currentSlide);
         app.startAnimation(currentSlide);
         app.previousSlide = currentSlide;
     }
