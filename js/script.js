@@ -91,7 +91,7 @@ $(window).resize(function(){
 
 var getCurrentSlide = function(){
     var winHeight = $(window).height();
-    var scrollHeight = $('body').scrollTop();
+    var scrollHeight = $(window).scrollTop();
     var lesserSlide = parseInt(Math.abs(scrollHeight) / winHeight);
     var proportion = Math.abs(scrollHeight) % winHeight / winHeight; //if this number is greater than .5 then add 1 to lesserslide to get the current slide in focus
     var currentSlide = proportion > 0.5 ? lesserSlide + 1 : lesserSlide;
@@ -214,7 +214,7 @@ $(window).scroll(function(){
     currentSlide = getCurrentSlide();
     if (currentSlide !== app.previousSlide) {
 
-        //console.log('slide changed to ' + currentSlide);
+        console.log('slide changed to ' + currentSlide);
         app.startAnimation(currentSlide);
         app.previousSlide = currentSlide;
     }
