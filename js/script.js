@@ -60,6 +60,10 @@ app.shuffleGallery.pause = function(){
     clearInterval(this.shufflingGallery);
 };
 
+$(window).load(function(){
+    app.positionCenteredPhones();
+});
+
 $(document).ready(function(){
     $('.slide').css({height: $(window).height()});
     app.shuffleGallery.start();
@@ -69,7 +73,7 @@ $(document).ready(function(){
 
     app.resizeGallery();
 
-    app.positionCenteredPhone();
+    app.positionCenteredPhones();
 
     app.automaticSlideshows();
 
@@ -92,7 +96,7 @@ $(document).ready(function(){
 $(window).resize(function(){
     $('.slide').css({height: $(window).height()});
     app.resizeGallery();
-    app.positionCenteredPhone();
+    app.positionCenteredPhones();
 });
 
 var getCurrentSlide = function(){
@@ -202,7 +206,9 @@ app.playBigSlideshow = function(){
     }, slideshowSpeed);
 }
 
-app.positionCenteredPhone = function(){
+app.positionCenteredPhones = function(){
+    console.log($('.first-slide .iphone').height());
+    $('.first-slide .iphone').css({'margin-top': $('.first-slide .iphone').height() / 2 * -1 + 'px'});
     $('.third-slide .iphone').css({'margin-left': $('.third-slide .iphone').width() / 2 * -1 + 'px'});
 }
 
