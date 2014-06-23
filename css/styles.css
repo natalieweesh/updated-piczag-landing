@@ -382,3 +382,7 @@ h2 {
 .slide-indicators a.highlighted {
   background: rgba(255, 255, 255, 0.83);
 }
+/* line 293, ../sass/styles.scss */
+.slide-indicators a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}

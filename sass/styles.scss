@@ -290,5 +290,8 @@ h2 {
     &.highlighted {
       background: rgba(255,255,255,0.83);
     }
+    &:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
   }
 }
