@@ -74,7 +74,7 @@ $(document).ready(function(){
     $('a', '.slide-indicators .dots').on('click', function(){
         var slideNum = $('.slide-indicators .dots a').index($(this)); //this is zero-indexed
         console.log('clicked slide ' + slideNum);
-        $('body, html').animate({'scrollTop': $(window).height() * slideNum});
+        $('body, html').animate({'scrollTop': $(window).height() * slideNum}, 2000);
     });
 
     $('.play-button', '.first-slide').on('click', function(){

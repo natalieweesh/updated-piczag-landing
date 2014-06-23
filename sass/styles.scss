@@ -209,6 +209,12 @@ h2 {
 
 .download-link {
   display: inline-block;
+  @include transition(all 0.2s);
+  &:hover {
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+
+  }
 }
 
 .last-slide-background {
@@ -251,8 +257,13 @@ h2 {
     &> a {
       display: inline-block;
       width: 3em;
+      @include transition(all 0.2s);
       img {
         width: 100%;
+      }
+      &:hover {
+        filter: alpha(opacity=90);
+        opacity: 0.9;
       }
     }
   }
