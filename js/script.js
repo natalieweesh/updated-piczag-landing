@@ -69,10 +69,18 @@ $(document).ready(function(){
 
     app.resizeGallery();
 
+    app.automaticSlideshows();
+
     $('a', '.slide-indicators .dots').on('click', function(){
         var slideNum = $('.slide-indicators .dots a').index($(this)); //this is zero-indexed
         console.log(slideNum);
         $('body', 'html').animate({'scrollTop': $(window).height() * slideNum});
+    });
+
+    $('.play-button', '.first-slide').on('click', function(){
+        $(this).hide(600);
+        app.playBigSlideshow();
+
     });
 });
 
@@ -94,14 +102,20 @@ var getCurrentSlide = function(){
 app.startAnimation = function(slideNum) {
     $('.slide-indicators .dots a').removeClass('highlighted');
     $('.slide-indicators .dots a:nth-child(' + slideNum + ')').addClass('highlighted');
-    if (slideNum === 2) {
-        animateSecondSlide();
-    } else if (slideNum === 3) {
-        animateThirdSlide();
-    } else if (slideNum === 4) {
-        animateFourthSlide();
-    } else if (slideNum === 5) {
-        animateFifthSlide();
+    
+    switch (slideNum) {
+        case 1:
+            animateFirstSlide();
+        case 2:
+            animateSecondSlide();
+        case 3:
+            animateThirdSlide();
+        case 4:
+            animateFourthSlide();
+        case 5:
+            animateFifthSlide();
+        default:
+            break;
     }
 }
 
@@ -111,6 +125,14 @@ app.resizeGallery = function(){
     var galleryWidth = numOfSlides * slideWidth;
     $('.gallery').css({'width': galleryWidth});
     $('.gallery').css({'margin-left': ($(window).width() - galleryWidth) / 2});
+}
+
+var animateFirstSlide = function(){
+    //$('.first-slide .play-button').addClass('animated pulse');
+    
+    // setTimeout(function(){
+        // $('.first-slide .play-button').removeClass('animated pulse');
+    // }, 1000);
 }
 
 var animateSecondSlide = function(){
@@ -149,6 +171,45 @@ var animateFifthSlide = function(){
     }, 2000);
 }
 
+app.playBigSlideshow = function(){
+    var slideshowSpeed = 2000;
+    var bigScreen = $('.iphone .big-screen');
+    var numOfSlides = $('.iphone .big-screen img').length;
+    $('.iphone .big-screen').find('img').css({'left': '100%'});
+    $('.iphone .big-screen').find('img').eq(0).css({'left': '0'});
+    
+    var currentSlide = 0;
+    var nextSlide = currentSlide + 1;
+    var slideshowPlaying = setInterval(function(){
+        $(bigScreen).find('img').eq(currentSlide).css({'left': '-100%'});
+        $(bigScreen).find('img').eq(nextSlide).css({'left': '0'});
+        currentSlide = nextSlide;
+        nextSlide += 1;
+        if (nextSlide >= numOfSlides) {
+            clearTimeout(slideshowPlaying);
+            setTimeout(function(){
+                $('.first-slide .play-button').show(600);
+            }, slideshowSpeed);
+        }
+    }, slideshowSpeed);
+}
+
+app.automaticSlideshows = function(){
+    var slideshowSpeed = 2000;
+    $('.iphone .screen').each(function(){
+        var images = $(this);
+        var numOfSlides = $(this).find('img').length;
+        var currentSlide = 0;
+        $(this).find('img').css({'opacity': '0'});
+        $(this).find('img').eq(0).css({'opacity': '1'});
+        setInterval(function(){
+            nextSlide = (currentSlide + 1 >= numOfSlides ? 0 : currentSlide + 1);
+            $(images).find('img').eq(currentSlide).css({'opacity': '0'});
+            $(images).find('img').eq(nextSlide).css({'opacity': '1'});
+            currentSlide = nextSlide;
+        }, slideshowSpeed);
+    });
+}
 
 $(window).scroll(function(){
     currentSlide = getCurrentSlide();
