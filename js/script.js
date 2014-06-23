@@ -69,6 +69,8 @@ $(document).ready(function(){
 
     app.resizeGallery();
 
+    app.positionCenteredPhone();
+
     app.automaticSlideshows();
 
     $('a', '.slide-indicators .dots').on('click', function(){
@@ -78,7 +80,10 @@ $(document).ready(function(){
     });
 
     $('.play-button', '.first-slide').on('click', function(){
-        $(this).hide(1000);
+        $(this).css({'opacity': '0'});
+        setTimeout(function(){
+            $('.play-button', '.first-slide').css({'display': 'none'});
+        });
         app.playBigSlideshow();
 
     });
@@ -87,6 +92,7 @@ $(document).ready(function(){
 $(window).resize(function(){
     $('.slide').css({height: $(window).height()});
     app.resizeGallery();
+    app.positionCenteredPhone();
 });
 
 var getCurrentSlide = function(){
@@ -187,10 +193,17 @@ app.playBigSlideshow = function(){
         if (nextSlide >= numOfSlides) {
             clearTimeout(slideshowPlaying);
             setTimeout(function(){
-                $('.first-slide .play-button').show(1000);
+                $('.first-slide .play-button').css({'display': 'block'});
             }, slideshowSpeed);
+            setTimeout(function(){
+                $('.first-slide .play-button').css({'opacity': '0.8'});
+            }, slideshowSpeed + 500);
         }
     }, slideshowSpeed);
+}
+
+app.positionCenteredPhone = function(){
+    $('.third-slide .iphone').css({'margin-left': $('.third-slide .iphone').width() / 2 * -1 + 'px'});
 }
 
 app.automaticSlideshows = function(){
