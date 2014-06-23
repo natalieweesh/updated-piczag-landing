@@ -73,7 +73,8 @@ $(document).ready(function(){
 
     $('a', '.slide-indicators .dots').on('click', function(){
         var slideNum = $('.slide-indicators .dots a').index($(this)); //this is zero-indexed
-        $('body', 'html').animate({'scrollTop': $(window).height() * slideNum});
+        console.log('clicked slide ' + slideNum);
+        $('body, html').animate({'scrollTop': $(window).height() * slideNum});
     });
 
     $('.play-button', '.first-slide').on('click', function(){
