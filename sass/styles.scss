@@ -13,7 +13,7 @@ html, body, ul, li, ol, a, p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: "Verdana", sans-serif;
+  font-family: 'Helvetica Neue', 'Lato', 'Verdana', sans-serif;
 
 }
 h2 {
@@ -48,6 +48,7 @@ h2 {
 .iphone {
   width: 200px;
   height: auto;
+  @include transition(all 0.5s);
   &> img {
     height: auto;
     width: 100%;
@@ -133,6 +134,83 @@ h2 {
   }
 }
 
+.big-black-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 12em;
+  z-index: 2;
+  background: #000;
+  filter: alpha(opacity=75);
+  opacity: 0.75;
+  @include transition(all 0.5s);
+  &.sticky {
+    position: fixed;
+  }
+  p {
+    color: $white;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+  }
+  h2 {
+    font-size: 2.1em;
+    margin: 1em 0 0;
+    color: $pink;
+    &.yellow {
+      color: $yellow;
+    }
+  }
+  .icon {
+    height: 6em;
+    margin: 3em 1em;
+  }
+  .slide-2-text {
+    width: 65%;
+    left: 35%;
+  }
+  .slide-3-text, .slide-4-text {
+    left: -100%;
+  }
+  .text-band {
+    position: absolute;
+    left: -100%;
+    width: 65%;
+  }
+}
+.slide-2-text {
+  .icon {
+    float: right;
+  }
+}
+.slide-3-text {
+  .left-half, .right-half {
+    width: 35%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1.05em;
+  }
+  .left-half {
+    float: left;
+    text-align: right;
+    .icon {
+      float: left;
+    }
+  }
+  .right-half {
+    float: right;
+    .icon {
+      float: right;
+    }
+  }
+}
+.slide-4-text {
+  .icon {
+    float: left;
+  }
+}
 .black-band {
   position: absolute;
   z-index: 2;
@@ -174,14 +252,51 @@ h2 {
   }
 }
 
+.main-iphone {
+  position: absolute;
+  bottom: 20px;
+  left: 70%;
+  left: -50%;
+  width: 27%;
+  max-width: 270px;
+  @include transition(all 0.5s);
+  height: auto;
+  &> img {
+    height: auto;
+    width: 100%;
+  }
+  &.sticky {
+    position: fixed;
+  }
+  .screen {
+    position: absolute;
+    top: 14.7%;
+    left: 8.5%;
+    width: 85%;
+    height: 71.5%;
+    img {
+      width: 100%;
+      position: absolute;
+      @include transition(all 0.4s);
+    }
+    &.screen-3, &.screen-4 {
+      filter: alpha(opacity=0);
+      opacity: 0;
+    }
+  }
+}
+
 .image-gallery-slide {
+  margin-bottom: 100%;
   .restrict-width {
     z-index: 3;
     pointer-events: none;
+    position: relative;
   }
   .iphone {
     position: absolute;
     right: 0;
+    left: 70%;
     bottom: 20px;
     width: 30%;
   }
@@ -190,6 +305,10 @@ h2 {
     .icon {
       width: 85%;
     }
+  }
+  .restrict-width {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -233,6 +352,9 @@ h2 {
     opacity: 0.9;
 
   }
+  img {
+    width: 200px;
+  }
 }
 
 .last-slide-background {
@@ -248,6 +370,13 @@ h2 {
 
 .last-slide {
   text-align: center;
+  position: fixed;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
   .restrict-width {
     display: table;
   }
