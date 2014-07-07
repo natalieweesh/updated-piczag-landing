@@ -315,6 +315,7 @@ h2 {
 .third-slide {
   background: url(../img/background-slide-3.png) no-repeat center top;
   background-size: cover;
+  z-index: 0;
   .iphone {
     position: absolute;
     z-index: 3;

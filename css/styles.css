@@ -423,8 +423,9 @@ h2 {
 .third-slide {
   background: url(../img/background-slide-3.png) no-repeat center top;
   background-size: cover;
+  z-index: 0;
 }
-/* line 318, ../sass/styles.scss */
+/* line 319, ../sass/styles.scss */
 .third-slide .iphone {
   position: absolute;
   z-index: 3;
@@ -433,29 +434,29 @@ h2 {
   bottom: 20px;
   width: 30%;
 }
-/* line 326, ../sass/styles.scss */
+/* line 327, ../sass/styles.scss */
 .third-slide .icon {
   height: 50px;
 }
-/* line 329, ../sass/styles.scss */
+/* line 330, ../sass/styles.scss */
 .third-slide .iphone-padding {
   width: 30%;
 }
-/* line 333, ../sass/styles.scss */
+/* line 334, ../sass/styles.scss */
 .third-slide table.left {
   width: 50%;
   float: left;
   padding-right: 16.5%;
   text-align: right;
 }
-/* line 339, ../sass/styles.scss */
+/* line 340, ../sass/styles.scss */
 .third-slide table.right {
   width: 50%;
   float: right;
   padding-left: 16.5%;
 }
 
-/* line 347, ../sass/styles.scss */
+/* line 348, ../sass/styles.scss */
 .download-link {
   display: inline-block;
   -webkit-transition: all 0.2s;
@@ -463,17 +464,17 @@ h2 {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 350, ../sass/styles.scss */
+/* line 351, ../sass/styles.scss */
 .download-link:hover {
   filter: alpha(opacity=90);
   opacity: 0.9;
 }
-/* line 355, ../sass/styles.scss */
+/* line 356, ../sass/styles.scss */
 .download-link img {
   width: 200px;
 }
 
-/* line 360, ../sass/styles.scss */
+/* line 361, ../sass/styles.scss */
 .last-slide-background {
   background: url(../img/background-teal.png) no-repeat center center;
   background-size: cover;
@@ -484,7 +485,7 @@ h2 {
   bottom: 0;
 }
 
-/* line 371, ../sass/styles.scss */
+/* line 372, ../sass/styles.scss */
 .last-slide {
   text-align: center;
   position: fixed;
@@ -495,39 +496,39 @@ h2 {
   top: 0;
   left: 0;
 }
-/* line 380, ../sass/styles.scss */
+/* line 381, ../sass/styles.scss */
 .last-slide .restrict-width {
   display: table;
 }
-/* line 383, ../sass/styles.scss */
+/* line 384, ../sass/styles.scss */
 .last-slide .content {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 387, ../sass/styles.scss */
+/* line 388, ../sass/styles.scss */
 .last-slide h2 {
   color: #ffff33;
   margin: 1em auto 0.5em;
 }
-/* line 391, ../sass/styles.scss */
+/* line 392, ../sass/styles.scss */
 .last-slide .download-link {
   margin-bottom: 2em;
 }
-/* line 394, ../sass/styles.scss */
+/* line 395, ../sass/styles.scss */
 .last-slide footer {
   margin: 2em auto;
 }
-/* line 397, ../sass/styles.scss */
+/* line 398, ../sass/styles.scss */
 .last-slide a {
   color: black;
   text-decoration: none;
 }
-/* line 401, ../sass/styles.scss */
+/* line 402, ../sass/styles.scss */
 .last-slide .social-icons {
   text-align: center;
   margin-bottom: 2em;
 }
-/* line 404, ../sass/styles.scss */
+/* line 405, ../sass/styles.scss */
 .last-slide .social-icons > a {
   display: inline-block;
   width: 3em;
@@ -536,17 +537,17 @@ h2 {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 408, ../sass/styles.scss */
+/* line 409, ../sass/styles.scss */
 .last-slide .social-icons > a img {
   width: 100%;
 }
-/* line 411, ../sass/styles.scss */
+/* line 412, ../sass/styles.scss */
 .last-slide .social-icons > a:hover {
   filter: alpha(opacity=90);
   opacity: 0.9;
 }
 
-/* line 419, ../sass/styles.scss */
+/* line 420, ../sass/styles.scss */
 .slide-indicators {
   position: fixed;
   right: 3%;
@@ -554,7 +555,7 @@ h2 {
   z-index: 5;
   margin-top: -95px;
 }
-/* line 429, ../sass/styles.scss */
+/* line 430, ../sass/styles.scss */
 .slide-indicators a {
   display: block;
   -webkit-transition: all 0.5s;
@@ -571,11 +572,11 @@ h2 {
   border: 2px solid rgba(255, 255, 255, 0.83);
   margin: 20px 0;
 }
-/* line 437, ../sass/styles.scss */
+/* line 438, ../sass/styles.scss */
 .slide-indicators a.highlighted {
   background: rgba(255, 255, 255, 0.83);
 }
-/* line 440, ../sass/styles.scss */
+/* line 441, ../sass/styles.scss */
 .slide-indicators a:hover {
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
