@@ -76,7 +76,7 @@ $(document).ready(function(){
 
     app.resizeGallery();
 
-    app.positionCenteredPhones();
+    //app.positionCenteredPhones();
 
     app.automaticSlideshows();
 
@@ -351,7 +351,7 @@ app.playBigSlideshow = function(){
 
 app.positionCenteredPhones = function(){
     console.log($('.first-slide .iphone').height());
-    $('.first-slide .iphone').css({'margin-top': $('.first-slide .iphone').height() / 2 * -1 + 'px'});
+    $('.first-slide .iphone').css({'top': '50%', 'margin-top': $('.first-slide .iphone').height() / 2 * -1 + 'px'});
     $('.third-slide .iphone').css({'margin-left': $('.third-slide .iphone').width() / 2 * -1 + 'px'});
 }
 
