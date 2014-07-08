@@ -92,9 +92,10 @@ h2 {
     }
     .play-button {
       position: absolute;
-      top: 100px;
+      top: 140px;
       left: 0;
-      width: 100%;
+      width: 90%;
+      margin: 0 2% 0 8%;
       z-index: 3;
       filter: alpha(opacity=80);
       opacity: 0.8;
@@ -107,7 +108,8 @@ h2 {
       animation-iteration-count: 3;
       img {
         display: block;
-        max-width: 100%;
+        width: 100%;
+        max-width: 250px;
         margin: 0 auto;
       }
       &:hover {
