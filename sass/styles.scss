@@ -267,6 +267,7 @@ h2 {
   left: 70%;
   left: -50%;
   width: 27%;
+  z-index: 1;
   max-width: 270px;
   @include transition(all 0.5s);
   height: auto;

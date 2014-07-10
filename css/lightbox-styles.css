@@ -1,17 +1,17 @@
 @-webkit-keyframes glow {
-  /* line 2, ../sass/animation.scss */
+  /* line 2, /Users/mba/Dropbox/piczag-landing-page-updated/sass/animation.scss */
   0% {
     filter: alpha(opacity=80);
     opacity: 0.8;
   }
 
-  /* line 6, ../sass/animation.scss */
+  /* line 6, /Users/mba/Dropbox/piczag-landing-page-updated/sass/animation.scss */
   50% {
     filter: alpha(opacity=100);
     opacity: 1;
   }
 
-  /* line 10, ../sass/animation.scss */
+  /* line 10, /Users/mba/Dropbox/piczag-landing-page-updated/sass/animation.scss */
   100% {
     filter: alpha(opacity=80);
     opacity: 0.8;
@@ -19,50 +19,50 @@
 }
 
 @keyframes glow {
-  /* line 16, ../sass/animation.scss */
+  /* line 16, /Users/mba/Dropbox/piczag-landing-page-updated/sass/animation.scss */
   0% {
     filter: alpha(opacity=80);
     opacity: 0.8;
   }
 
-  /* line 20, ../sass/animation.scss */
+  /* line 20, /Users/mba/Dropbox/piczag-landing-page-updated/sass/animation.scss */
   50% {
     filter: alpha(opacity=100);
     opacity: 1;
   }
 
-  /* line 24, ../sass/animation.scss */
+  /* line 24, /Users/mba/Dropbox/piczag-landing-page-updated/sass/animation.scss */
   100% {
     filter: alpha(opacity=80);
     opacity: 0.8;
   }
 }
 
-/* line 9, ../sass/styles.scss */
+/* line 9, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 html, body, ul, li, ol, a, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* line 15, ../sass/styles.scss */
+/* line 15, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 body {
   font-family: 'Helvetica Neue', 'Lato', 'Verdana', sans-serif;
 }
 
-/* line 19, ../sass/styles.scss */
+/* line 19, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 h2 {
   font-weight: normal;
 }
 
-/* line 23, ../sass/styles.scss */
+/* line 23, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .clearfix:after {
   display: table;
   clear: both;
   content: "";
 }
 
-/* line 29, ../sass/styles.scss */
+/* line 29, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .restrict-width {
   width: 90%;
   height: 100%;
@@ -71,20 +71,20 @@ h2 {
   max-width: 900px;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 37, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide {
   height: 500px;
   position: relative;
   overflow: hidden;
 }
 
-/* line 43, ../sass/styles.scss */
+/* line 43, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .image-gallery-slide, .first-slide {
   background: url(../img/background-teal.png) no-repeat center center;
   background-size: cover;
 }
 
-/* line 48, ../sass/styles.scss */
+/* line 48, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .iphone {
   width: 200px;
   height: auto;
@@ -93,33 +93,33 @@ h2 {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 52, ../sass/styles.scss */
+/* line 52, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .iphone > img {
   height: auto;
   width: 100%;
 }
-/* line 56, ../sass/styles.scss */
+/* line 56, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .iphone .big-screen {
   width: 85.2%;
   height: 71.3%;
   top: 14.7%;
   left: 8.5%;
 }
-/* line 62, ../sass/styles.scss */
+/* line 62, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .iphone .screen {
   top: 14.7%;
   left: 8.5%;
   width: 85%;
   height: 71.5%;
 }
-/* line 68, ../sass/styles.scss */
+/* line 68, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .iphone .screen, .iphone .big-screen {
   position: absolute;
   z-index: 2;
   overflow: hidden;
   background: black;
 }
-/* line 73, ../sass/styles.scss */
+/* line 73, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .iphone .screen img, .iphone .big-screen img {
   width: 100%;
   position: absolute;
@@ -129,7 +129,7 @@ h2 {
   transition: all 0.4s;
 }
 
-/* line 82, ../sass/styles.scss */
+/* line 82, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .iphone {
   position: absolute;
   right: 3%;
@@ -138,12 +138,12 @@ h2 {
   top: 50%;
   margin-top: -261.5px;
 }
-/* line 89, ../sass/styles.scss */
+/* line 89, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .iphone > img {
   width: 100%;
   height: auto;
 }
-/* line 93, ../sass/styles.scss */
+/* line 93, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .iphone .zag-icon {
   width: auto;
   position: absolute;
@@ -151,7 +151,7 @@ h2 {
   bottom: -23px;
   right: -21%;
 }
-/* line 100, ../sass/styles.scss */
+/* line 100, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .iphone .play-button {
   position: absolute;
   top: 140px;
@@ -172,32 +172,32 @@ h2 {
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
 }
-/* line 116, ../sass/styles.scss */
+/* line 116, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .iphone .play-button img {
   display: block;
   width: 100%;
   max-width: 250px;
   margin: 0 auto;
 }
-/* line 122, ../sass/styles.scss */
+/* line 122, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .iphone .play-button:hover {
   filter: alpha(opacity=100) !important;
   opacity: 1!important;
 }
-/* line 128, ../sass/styles.scss */
+/* line 128, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .restrict-width {
   display: table;
 }
-/* line 131, ../sass/styles.scss */
+/* line 131, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide h2 {
   color: white;
   margin: 0;
 }
-/* line 135, ../sass/styles.scss */
+/* line 135, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .download-link {
   margin-top: 3em;
 }
-/* line 138, ../sass/styles.scss */
+/* line 138, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .first-slide .content {
   display: table-cell;
   vertical-align: middle;
@@ -205,7 +205,7 @@ h2 {
   padding-right: 38%;
 }
 
-/* line 146, ../sass/styles.scss */
+/* line 146, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band {
   position: absolute;
   bottom: 0;
@@ -220,88 +220,88 @@ h2 {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 156, ../sass/styles.scss */
+/* line 156, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band.sticky {
   position: fixed;
 }
-/* line 159, ../sass/styles.scss */
+/* line 159, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band p {
   color: white;
   font-size: 1.2em;
   margin-top: 0.5em;
 }
-/* line 164, ../sass/styles.scss */
+/* line 164, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band h2 {
   font-size: 2.1em;
   margin: 1em 0 0;
   color: #ff3366;
 }
-/* line 168, ../sass/styles.scss */
+/* line 168, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band h2.yellow {
   color: #ffff33;
 }
-/* line 172, ../sass/styles.scss */
+/* line 172, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band .icon {
   height: 6em;
   margin: 3em 1em;
 }
-/* line 176, ../sass/styles.scss */
+/* line 176, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band .slide-2-text {
   width: 65%;
   left: 35%;
 }
-/* line 180, ../sass/styles.scss */
+/* line 180, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band .slide-3-text, .big-black-band .slide-4-text {
   left: -100%;
 }
-/* line 183, ../sass/styles.scss */
+/* line 183, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .big-black-band .text-band {
   position: absolute;
   left: -100%;
   width: 65%;
 }
 
-/* line 190, ../sass/styles.scss */
+/* line 190, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-2-text .icon {
   float: right;
 }
 
-/* line 195, ../sass/styles.scss */
+/* line 195, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-3-text .left-half, .slide-3-text .right-half {
   width: 35%;
 }
-/* line 198, ../sass/styles.scss */
+/* line 198, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-3-text h2 {
   font-size: 2em;
 }
-/* line 201, ../sass/styles.scss */
+/* line 201, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-3-text p {
   font-size: 1.05em;
 }
-/* line 204, ../sass/styles.scss */
+/* line 204, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-3-text .left-half {
   float: left;
   text-align: right;
 }
-/* line 207, ../sass/styles.scss */
+/* line 207, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-3-text .left-half .icon {
   float: left;
 }
-/* line 211, ../sass/styles.scss */
+/* line 211, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-3-text .right-half {
   float: right;
 }
-/* line 213, ../sass/styles.scss */
+/* line 213, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-3-text .right-half .icon {
   float: right;
 }
 
-/* line 219, ../sass/styles.scss */
+/* line 219, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-4-text .icon {
   float: left;
 }
 
-/* line 223, ../sass/styles.scss */
+/* line 223, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .black-band {
   position: absolute;
   z-index: 2;
@@ -309,55 +309,56 @@ h2 {
   bottom: 0;
   background: rgba(0, 0, 0, 0.9);
 }
-/* line 229, ../sass/styles.scss */
+/* line 229, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .black-band p {
   color: white;
   margin: 0.5em 0 2em;
 }
-/* line 233, ../sass/styles.scss */
+/* line 233, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .black-band h2 {
   color: #ff3366;
   margin: 1em 0 0;
 }
-/* line 236, ../sass/styles.scss */
+/* line 236, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .black-band h2.yellow {
   color: #ffff33;
 }
 
-/* line 242, ../sass/styles.scss */
+/* line 242, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .icon {
   filter: alpha(opacity=83);
   opacity: 0.83;
 }
 
-/* line 247, ../sass/styles.scss */
+/* line 247, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .second-slide {
   background: url(../img/background-slide-2.png) no-repeat center center;
   background-size: cover;
 }
-/* line 250, ../sass/styles.scss */
+/* line 250, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .second-slide .iphone {
   position: absolute;
   bottom: 20px;
   z-index: 3;
   width: 30%;
 }
-/* line 256, ../sass/styles.scss */
+/* line 256, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .second-slide table {
   margin-left: 33%;
 }
-/* line 258, ../sass/styles.scss */
+/* line 258, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .second-slide table .icon {
   width: 85%;
 }
 
-/* line 264, ../sass/styles.scss */
+/* line 264, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .main-iphone {
   position: absolute;
   bottom: 20px;
   left: 70%;
   left: -50%;
   width: 27%;
+  z-index: 1;
   max-width: 270px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -365,16 +366,16 @@ h2 {
   transition: all 0.5s;
   height: auto;
 }
-/* line 273, ../sass/styles.scss */
+/* line 274, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .main-iphone > img {
   height: auto;
   width: 100%;
 }
-/* line 277, ../sass/styles.scss */
+/* line 278, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .main-iphone.sticky {
   position: fixed;
 }
-/* line 280, ../sass/styles.scss */
+/* line 281, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .main-iphone .screen {
   position: absolute;
   top: 14.7%;
@@ -382,7 +383,7 @@ h2 {
   width: 85%;
   height: 71.5%;
 }
-/* line 286, ../sass/styles.scss */
+/* line 287, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .main-iphone .screen img {
   width: 100%;
   position: absolute;
@@ -391,23 +392,23 @@ h2 {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 291, ../sass/styles.scss */
+/* line 292, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .main-iphone .screen.screen-3, .main-iphone .screen.screen-4 {
   filter: alpha(opacity=0);
   opacity: 0;
 }
 
-/* line 298, ../sass/styles.scss */
+/* line 299, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .image-gallery-slide {
   margin-bottom: 100%;
 }
-/* line 300, ../sass/styles.scss */
+/* line 301, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .image-gallery-slide .restrict-width {
   z-index: 3;
   pointer-events: none;
   position: relative;
 }
-/* line 305, ../sass/styles.scss */
+/* line 306, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .image-gallery-slide .iphone {
   position: absolute;
   right: 0;
@@ -415,27 +416,27 @@ h2 {
   bottom: 20px;
   width: 30%;
 }
-/* line 312, ../sass/styles.scss */
+/* line 313, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .image-gallery-slide table {
   margin-right: 33%;
 }
-/* line 314, ../sass/styles.scss */
+/* line 315, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .image-gallery-slide table .icon {
   width: 85%;
 }
-/* line 318, ../sass/styles.scss */
+/* line 319, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .image-gallery-slide .restrict-width {
   width: 100%;
   max-width: 100%;
 }
 
-/* line 324, ../sass/styles.scss */
+/* line 325, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .third-slide {
   background: url(../img/background-slide-3.png) no-repeat center top;
   background-size: cover;
   z-index: 0;
 }
-/* line 328, ../sass/styles.scss */
+/* line 329, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .third-slide .iphone {
   position: absolute;
   z-index: 3;
@@ -444,29 +445,29 @@ h2 {
   bottom: 20px;
   width: 30%;
 }
-/* line 336, ../sass/styles.scss */
+/* line 337, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .third-slide .icon {
   height: 50px;
 }
-/* line 339, ../sass/styles.scss */
+/* line 340, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .third-slide .iphone-padding {
   width: 30%;
 }
-/* line 343, ../sass/styles.scss */
+/* line 344, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .third-slide table.left {
   width: 50%;
   float: left;
   padding-right: 16.5%;
   text-align: right;
 }
-/* line 349, ../sass/styles.scss */
+/* line 350, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .third-slide table.right {
   width: 50%;
   float: right;
   padding-left: 16.5%;
 }
 
-/* line 357, ../sass/styles.scss */
+/* line 358, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .download-link {
   display: inline-block;
   -webkit-transition: all 0.2s;
@@ -474,7 +475,7 @@ h2 {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 360, ../sass/styles.scss */
+/* line 361, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .download-link:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -482,12 +483,12 @@ h2 {
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
-/* line 364, ../sass/styles.scss */
+/* line 365, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .download-link img {
   width: 200px;
 }
 
-/* line 369, ../sass/styles.scss */
+/* line 370, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide-background {
   background: url(../img/background-teal.png) no-repeat center center;
   background-size: cover;
@@ -498,7 +499,7 @@ h2 {
   bottom: 0;
 }
 
-/* line 380, ../sass/styles.scss */
+/* line 381, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide {
   text-align: center;
   position: fixed;
@@ -509,39 +510,39 @@ h2 {
   top: 0;
   left: 0;
 }
-/* line 389, ../sass/styles.scss */
+/* line 390, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide .restrict-width {
   display: table;
 }
-/* line 392, ../sass/styles.scss */
+/* line 393, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide .content {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 396, ../sass/styles.scss */
+/* line 397, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide h2 {
   color: #ffff33;
   margin: 1em auto 0.5em;
 }
-/* line 400, ../sass/styles.scss */
+/* line 401, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide .download-link {
   margin-bottom: 2em;
 }
-/* line 403, ../sass/styles.scss */
+/* line 404, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide footer {
   margin: 2em auto;
 }
-/* line 406, ../sass/styles.scss */
+/* line 407, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide a {
   color: black;
   text-decoration: none;
 }
-/* line 410, ../sass/styles.scss */
+/* line 411, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide .social-icons {
   text-align: center;
   margin-bottom: 2em;
 }
-/* line 413, ../sass/styles.scss */
+/* line 414, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide .social-icons > a {
   display: inline-block;
   width: 3em;
@@ -550,17 +551,17 @@ h2 {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 417, ../sass/styles.scss */
+/* line 418, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide .social-icons > a img {
   width: 100%;
 }
-/* line 420, ../sass/styles.scss */
+/* line 421, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .last-slide .social-icons > a:hover {
   filter: alpha(opacity=90);
   opacity: 0.9;
 }
 
-/* line 428, ../sass/styles.scss */
+/* line 429, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-indicators {
   position: fixed;
   right: 3%;
@@ -568,7 +569,7 @@ h2 {
   z-index: 5;
   margin-top: -95px;
 }
-/* line 438, ../sass/styles.scss */
+/* line 439, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-indicators a {
   display: block;
   -webkit-transition: all 0.5s;
@@ -585,11 +586,11 @@ h2 {
   border: 2px solid rgba(255, 255, 255, 0.83);
   margin: 20px 0;
 }
-/* line 446, ../sass/styles.scss */
+/* line 447, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-indicators a.highlighted {
   background: rgba(255, 255, 255, 0.83);
 }
-/* line 449, ../sass/styles.scss */
+/* line 450, /Users/mba/Dropbox/piczag-landing-page-updated/sass/styles.scss */
 .slide-indicators a:hover {
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;

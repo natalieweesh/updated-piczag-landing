@@ -358,6 +358,7 @@ h2 {
   left: 70%;
   left: -50%;
   width: 27%;
+  z-index: 1;
   max-width: 270px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -365,16 +366,16 @@ h2 {
   transition: all 0.5s;
   height: auto;
 }
-/* line 273, ../sass/styles.scss */
+/* line 274, ../sass/styles.scss */
 .main-iphone > img {
   height: auto;
   width: 100%;
 }
-/* line 277, ../sass/styles.scss */
+/* line 278, ../sass/styles.scss */
 .main-iphone.sticky {
   position: fixed;
 }
-/* line 280, ../sass/styles.scss */
+/* line 281, ../sass/styles.scss */
 .main-iphone .screen {
   position: absolute;
   top: 14.7%;
@@ -382,7 +383,7 @@ h2 {
   width: 85%;
   height: 71.5%;
 }
-/* line 286, ../sass/styles.scss */
+/* line 287, ../sass/styles.scss */
 .main-iphone .screen img {
   width: 100%;
   position: absolute;
@@ -391,23 +392,23 @@ h2 {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 291, ../sass/styles.scss */
+/* line 292, ../sass/styles.scss */
 .main-iphone .screen.screen-3, .main-iphone .screen.screen-4 {
   filter: alpha(opacity=0);
   opacity: 0;
 }
 
-/* line 298, ../sass/styles.scss */
+/* line 299, ../sass/styles.scss */
 .image-gallery-slide {
   margin-bottom: 100%;
 }
-/* line 300, ../sass/styles.scss */
+/* line 301, ../sass/styles.scss */
 .image-gallery-slide .restrict-width {
   z-index: 3;
   pointer-events: none;
   position: relative;
 }
-/* line 305, ../sass/styles.scss */
+/* line 306, ../sass/styles.scss */
 .image-gallery-slide .iphone {
   position: absolute;
   right: 0;
@@ -415,27 +416,27 @@ h2 {
   bottom: 20px;
   width: 30%;
 }
-/* line 312, ../sass/styles.scss */
+/* line 313, ../sass/styles.scss */
 .image-gallery-slide table {
   margin-right: 33%;
 }
-/* line 314, ../sass/styles.scss */
+/* line 315, ../sass/styles.scss */
 .image-gallery-slide table .icon {
   width: 85%;
 }
-/* line 318, ../sass/styles.scss */
+/* line 319, ../sass/styles.scss */
 .image-gallery-slide .restrict-width {
   width: 100%;
   max-width: 100%;
 }
 
-/* line 324, ../sass/styles.scss */
+/* line 325, ../sass/styles.scss */
 .third-slide {
   background: url(../img/background-slide-3.png) no-repeat center top;
   background-size: cover;
   z-index: 0;
 }
-/* line 328, ../sass/styles.scss */
+/* line 329, ../sass/styles.scss */
 .third-slide .iphone {
   position: absolute;
   z-index: 3;
@@ -444,29 +445,29 @@ h2 {
   bottom: 20px;
   width: 30%;
 }
-/* line 336, ../sass/styles.scss */
+/* line 337, ../sass/styles.scss */
 .third-slide .icon {
   height: 50px;
 }
-/* line 339, ../sass/styles.scss */
+/* line 340, ../sass/styles.scss */
 .third-slide .iphone-padding {
   width: 30%;
 }
-/* line 343, ../sass/styles.scss */
+/* line 344, ../sass/styles.scss */
 .third-slide table.left {
   width: 50%;
   float: left;
   padding-right: 16.5%;
   text-align: right;
 }
-/* line 349, ../sass/styles.scss */
+/* line 350, ../sass/styles.scss */
 .third-slide table.right {
   width: 50%;
   float: right;
   padding-left: 16.5%;
 }
 
-/* line 357, ../sass/styles.scss */
+/* line 358, ../sass/styles.scss */
 .download-link {
   display: inline-block;
   -webkit-transition: all 0.2s;
@@ -474,7 +475,7 @@ h2 {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 360, ../sass/styles.scss */
+/* line 361, ../sass/styles.scss */
 .download-link:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -482,12 +483,12 @@ h2 {
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
-/* line 364, ../sass/styles.scss */
+/* line 365, ../sass/styles.scss */
 .download-link img {
   width: 200px;
 }
 
-/* line 369, ../sass/styles.scss */
+/* line 370, ../sass/styles.scss */
 .last-slide-background {
   background: url(../img/background-teal.png) no-repeat center center;
   background-size: cover;
@@ -498,7 +499,7 @@ h2 {
   bottom: 0;
 }
 
-/* line 380, ../sass/styles.scss */
+/* line 381, ../sass/styles.scss */
 .last-slide {
   text-align: center;
   position: fixed;
@@ -509,39 +510,39 @@ h2 {
   top: 0;
   left: 0;
 }
-/* line 389, ../sass/styles.scss */
+/* line 390, ../sass/styles.scss */
 .last-slide .restrict-width {
   display: table;
 }
-/* line 392, ../sass/styles.scss */
+/* line 393, ../sass/styles.scss */
 .last-slide .content {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 396, ../sass/styles.scss */
+/* line 397, ../sass/styles.scss */
 .last-slide h2 {
   color: #ffff33;
   margin: 1em auto 0.5em;
 }
-/* line 400, ../sass/styles.scss */
+/* line 401, ../sass/styles.scss */
 .last-slide .download-link {
   margin-bottom: 2em;
 }
-/* line 403, ../sass/styles.scss */
+/* line 404, ../sass/styles.scss */
 .last-slide footer {
   margin: 2em auto;
 }
-/* line 406, ../sass/styles.scss */
+/* line 407, ../sass/styles.scss */
 .last-slide a {
   color: black;
   text-decoration: none;
 }
-/* line 410, ../sass/styles.scss */
+/* line 411, ../sass/styles.scss */
 .last-slide .social-icons {
   text-align: center;
   margin-bottom: 2em;
 }
-/* line 413, ../sass/styles.scss */
+/* line 414, ../sass/styles.scss */
 .last-slide .social-icons > a {
   display: inline-block;
   width: 3em;
@@ -550,17 +551,17 @@ h2 {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 417, ../sass/styles.scss */
+/* line 418, ../sass/styles.scss */
 .last-slide .social-icons > a img {
   width: 100%;
 }
-/* line 420, ../sass/styles.scss */
+/* line 421, ../sass/styles.scss */
 .last-slide .social-icons > a:hover {
   filter: alpha(opacity=90);
   opacity: 0.9;
 }
 
-/* line 428, ../sass/styles.scss */
+/* line 429, ../sass/styles.scss */
 .slide-indicators {
   position: fixed;
   right: 3%;
@@ -568,7 +569,7 @@ h2 {
   z-index: 5;
   margin-top: -95px;
 }
-/* line 438, ../sass/styles.scss */
+/* line 439, ../sass/styles.scss */
 .slide-indicators a {
   display: block;
   -webkit-transition: all 0.5s;
@@ -585,11 +586,11 @@ h2 {
   border: 2px solid rgba(255, 255, 255, 0.83);
   margin: 20px 0;
 }
-/* line 446, ../sass/styles.scss */
+/* line 447, ../sass/styles.scss */
 .slide-indicators a.highlighted {
   background: rgba(255, 255, 255, 0.83);
 }
-/* line 449, ../sass/styles.scss */
+/* line 450, ../sass/styles.scss */
 .slide-indicators a:hover {
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
