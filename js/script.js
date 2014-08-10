@@ -68,8 +68,8 @@ $(document).ready(function(){
 
     $('body, html').scrollTop(0);
 
-    $('.slide').css({height: $(window).height()});
-    app.shuffleGallery.start();
+    $('.slide, .image-gallery-slide .gallery').css({height: $(window).height()});
+    //app.shuffleGallery.start();
 
     app.previousSlide = getCurrentSlide();
     app.startAnimation(app.previousSlide);
@@ -257,7 +257,7 @@ var animateSecondSlide = function(){
     $('.big-black-band').css({'opacity': '0'});
     $('.big-black-band .text-band').css({'width': '65%'});
     $('.big-black-band').animate({'opacity': '0.75'});
-    $('.slide-2-text').animate({'left': '35%'});
+    $('.slide-2-text').animate({'left': '30%'});
     $('.slide-3-text').animate({'left': '-100%'});
     $('.slide-4-text').css({'left': '-100%'});
     $('.main-iphone').css({'left': '-5%', 'margin': '0'});
@@ -293,7 +293,7 @@ var animateFourthSlide = function(){
     //$('.image-gallery-slide .black-band').animate({'bottom': '0'}, 1000);
     $('.main-iphone').css({'left': '70%', 'margin-left': '0'});
     $('.slide-3-text').animate({'left': '100%'});
-    $('.slide-4-text').animate({'left': '0'});
+    $('.slide-4-text').animate({'left': '5%'});
     $('.screen-2').animate({'opacity': '0'});
     $('.screen-3').animate({'opacity': '0'});
     $('.screen-4').animate({'opacity': '1'});
@@ -356,7 +356,7 @@ app.positionCenteredPhones = function(){
 }
 
 app.automaticSlideshows = function(){
-    var slideshowSpeed = 2000;
+    var slideshowSpeed = 4000;
     $('.main-iphone .screen').each(function(){
         var images = $(this);
         var numOfSlides = $(this).find('img').length;

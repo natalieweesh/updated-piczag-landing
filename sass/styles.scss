@@ -18,6 +18,7 @@ body {
 }
 h2 {
   font-weight: normal;
+
 }
 
 .clearfix:after {
@@ -54,10 +55,10 @@ h2 {
     width: 100%;
   }
   .big-screen {
-    width: 85.2%;
-    height: 71.3%;
-    top: 14.7%;
-    left: 8.5%;
+    width: 75%;
+    height: 67.3%;
+    top: 15.8%;
+    left: 13.5%;
   }
   .screen {
     top: 14.7%;
@@ -99,8 +100,8 @@ h2 {
     }
     .play-button {
       position: absolute;
-      top: 140px;
-      left: 0;
+      top: 160px;
+      left: 5px;
       width: 90%;
       margin: 0 2% 0 8%;
       z-index: 3;
@@ -131,6 +132,7 @@ h2 {
   h2 {
     color: $white;
     margin: 0;
+    font-size: 40px;
   }
   .download-link {
     margin-top: 3em;
@@ -140,6 +142,10 @@ h2 {
     vertical-align: middle;
     text-align: center;
     padding-right: 38%;
+    .logo {
+      width: 85%;
+      margin: -30px auto -36px;
+    }
   }
 }
 
@@ -175,7 +181,7 @@ h2 {
   }
   .slide-2-text {
     width: 65%;
-    left: 35%;
+    left: 30%;
   }
   .slide-3-text, .slide-4-text {
     left: -100%;
@@ -194,6 +200,12 @@ h2 {
 .slide-3-text {
   .left-half, .right-half {
     width: 35%;
+  }
+  .left-half {
+    margin-left: 3%;
+  }
+  .right-half {
+    margin-right: 3%;
   }
   h2 {
     font-size: 2em;
@@ -216,6 +228,8 @@ h2 {
   }
 }
 .slide-4-text {
+  text-align: right;
+  left: 5%;
   .icon {
     float: left;
   }
@@ -280,9 +294,9 @@ h2 {
   }
   .screen {
     position: absolute;
-    top: 14.7%;
-    left: 8.5%;
-    width: 85%;
+    top: 15.5%;
+    left: 13.5%;
+    width: 75%;
     height: 71.5%;
     img {
       width: 100%;
