@@ -246,7 +246,7 @@ var animateFirstSlide = function(){
     // }, 1000);
     $('.main-iphone').css({'left': '-50%'});
     $('.big-black-band').css({'opacity': '0'});
-    $('.slide-2-text, .slide-3-text, .slide-4-text').css({'left': '-100%'});
+    // $('.slide-2-text, .slide-3-text, .slide-4-text').css({'left': '-100%'});
     $('.screen-2, .screen-3, .screen-4').css({'opacity': '0'});
     $('.last-slide').css({'z-index': '-1'});
 }
@@ -254,12 +254,15 @@ var animateFirstSlide = function(){
 var animateSecondSlide = function(){
     //$('.second-slide .black-band').css({'bottom': '100%'});
     //$('.second-slide .black-band').animate({'bottom': '0'}, 1000);
-    $('.big-black-band').css({'opacity': '0'});
-    $('.big-black-band .text-band').css({'width': '65%'});
-    $('.big-black-band').animate({'opacity': '0.75'});
-    $('.slide-2-text').animate({'left': '30%'});
-    $('.slide-3-text').animate({'left': '-100%'});
-    $('.slide-4-text').css({'left': '-100%'});
+    $('.big-black-band').css({'left': '100%'});
+    $('.big-black-band.second').css({'left': '0'});
+
+    // $('.big-black-band').css({'opacity': '0'});
+    // $('.big-black-band .text-band').css({'width': '65%'});
+    // $('.big-black-band').animate({'opacity': '0.75'});
+    // $('.slide-2-text').animate({'left': '30%'});
+    // $('.slide-3-text').animate({'left': '-100%'});
+    // $('.slide-4-text').css({'left': '-100%'});
     $('.main-iphone').css({'left': '-5%', 'margin': '0'});
     $('.main-iphone').animate({'left': '5%'});
     $('.screen-2').css({'opacity': '1'});
@@ -274,6 +277,9 @@ var animateSecondSlide = function(){
 var animateThirdSlide = function(){
     //$('.third-slide .black-band').css({'bottom': '100%'});
     //$('.third-slide .black-band').animate({'bottom': '0'}, 1000);
+    $('.big-black-band, .big-black-band .text-band').css({'left': '100%'});
+    $('.big-black-band.third, .big-black-band.third .text-band').css({'left': '0'});
+
     $('.main-iphone').css({'left': '50%', 'margin-left': $('.main-iphone').width()/2 * -1 + 'px'});
     $('.big-black-band').css({'opacity': '0.75'});
     $('.big-black-band .text-band').css({'width': '100%'});
@@ -291,6 +297,9 @@ var animateThirdSlide = function(){
 var animateFourthSlide = function(){
     //$('.image-gallery-slide .black-band').css({'bottom': '100%'});
     //$('.image-gallery-slide .black-band').animate({'bottom': '0'}, 1000);
+    $('.big-black-band, .big-black-band .text-band').css({'left': '100%'});
+    $('.big-black-band.fourth, .big-black-band.fourth .text-band').css({'left': '0'});
+
     $('.main-iphone').css({'left': '70%', 'margin-left': '0'});
     $('.slide-3-text').animate({'left': '100%'});
     $('.slide-4-text').animate({'left': '5%'});
@@ -307,6 +316,8 @@ var animateFourthSlide = function(){
 var animateFifthSlide = function(){
     //$('.last-slide .social-icons').addClass('animated bounceInDown');
     //$('.big-black-band').css({'opacity': '0'});
+
+    $('.big-black-band, .big-black-band .text-band').css({'left': '100%'});
     $('.main-iphone').css({'left': '100%', 'margin-left': '0'});
     $('.big-black-band').css({'opacity': '0'});
     $('.slide-2-text, .slide-3-text, .slide-4-text').css({'left': '-100%'});
