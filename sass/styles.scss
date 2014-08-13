@@ -117,10 +117,10 @@ h2 {
     }
     .play-button {
       position: absolute;
-      top: 160px;
+      top: 50%;
       left: 5px;
       width: 90%;
-      margin: 0 2% 0 8%;
+      margin: -134.5px 2% 0 8%;
       z-index: 3;
       filter: alpha(opacity=80);
       opacity: 0.8;
@@ -219,18 +219,16 @@ h2 {
 .slide-3-text {
   .left-half, .right-half {
     width: 35%;
-  }
-  .left-half {
-    margin-left: 3%;
-  }
-  .right-half {
-    margin-right: 3%;
+    margin: 0 2%;
   }
   h2 {
     font-size: 2em;
   }
   p {
     font-size: 1.05em;
+  }
+  .icon {
+    margin: 3em 0;
   }
   .left-half {
     float: left;
