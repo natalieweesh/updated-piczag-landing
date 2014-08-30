@@ -1,17 +1,17 @@
 @-webkit-keyframes glow {
-  /* line 2, ../sass/animation.scss */
+  /* line 2, ../scss/animation.scss */
   0% {
     filter: alpha(opacity=80);
     opacity: 0.8;
   }
 
-  /* line 6, ../sass/animation.scss */
+  /* line 6, ../scss/animation.scss */
   50% {
     filter: alpha(opacity=100);
     opacity: 1;
   }
 
-  /* line 10, ../sass/animation.scss */
+  /* line 10, ../scss/animation.scss */
   100% {
     filter: alpha(opacity=80);
     opacity: 0.8;
@@ -19,19 +19,19 @@
 }
 
 @keyframes glow {
-  /* line 16, ../sass/animation.scss */
+  /* line 16, ../scss/animation.scss */
   0% {
     filter: alpha(opacity=80);
     opacity: 0.8;
   }
 
-  /* line 20, ../sass/animation.scss */
+  /* line 20, ../scss/animation.scss */
   50% {
     filter: alpha(opacity=100);
     opacity: 1;
   }
 
-  /* line 24, ../sass/animation.scss */
+  /* line 24, ../scss/animation.scss */
   100% {
     filter: alpha(opacity=80);
     opacity: 0.8;

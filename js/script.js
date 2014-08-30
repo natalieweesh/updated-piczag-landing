@@ -58,6 +58,27 @@ $(window).load(function(){
 
 $(document).ready(function(){
 
+    //onepage-scroll
+    $(".main").onepage_scroll({
+       sectionContainer: ".slide",     
+       easing: "ease",                  
+                                        
+       animationTime: 1000,             
+       pagination: true,                
+       updateURL: false,                
+       beforeMove: function(index) {},  
+       afterMove: function(index) {
+            app.startAnimation(index);
+       },   
+       loop: false,                     
+       keyboard: true,                  
+       responsiveFallback: false,        
+                                        
+                                        
+       direction: "vertical"            
+    });
+
+
     $('.fancybox').fancybox({
       type: 'iframe',
       padding: 0,
@@ -82,7 +103,7 @@ $(document).ready(function(){
 
     $('a', '.slide-indicators .dots').on('click', function(){
         var slideNum = $('.slide-indicators .dots a').index($(this)); //this is zero-indexed
-        console.log('clicked slide ' + slideNum);
+        // console.log('clicked slide ' + slideNum);
         
 
         
@@ -128,11 +149,11 @@ $(document).ready(function(){
         timer = setTimeout(refresh, 150);
     });
     var refresh = function(){
-        console.log('stopped scrolling');
+        // console.log('stopped scrolling');
 
         // currentSlide = getCurrentSlide();
         if ($(window).scrollTop() > (app.previousSlide - 1) * $(window).height()) {
-            console.log('scrolled down!');
+            // console.log('scrolled down!');
             $(window).unbind('scroll');
             $(window).scroll(function(){app.scrollBlackBar();});
             $('body, html').animate({'scrollTop': $(window).height() * (currentSlide-1+1)}, 500);
@@ -140,7 +161,7 @@ $(document).ready(function(){
             app.startAnimation(currentSlide+1);
             app.previousSlide = currentSlide+1;
         } else {
-            console.log('scrolled up!');
+            // console.log('scrolled up!');
             $(window).unbind('scroll');
             $(window).scroll(function(){app.scrollBlackBar();});
             $('body, html').animate({'scrollTop': $(window).height() * (currentSlide-1)}, 500);
@@ -200,12 +221,13 @@ var getCurrentSlide = function(){
     var currentSlide = proportion > 0.5 ? lesserSlide + 1 : lesserSlide;
     //console.log('current slide: ' + (currentSlide + 1)); // slides aren't zero-indexed
     //return (currentSlide + 1); //so slides aren't zero-indexed
-    console.log('CURRENT SLIDE: ' + (lesserSlide + 1));
+    // console.log('CURRENT SLIDE: ' + (lesserSlide + 1));
     return (lesserSlide + 1);
 
 }
 
 app.startAnimation = function(slideNum) {
+    // console.log('in START ANIMAITON FUNCTION');
     $('.slide-indicators .dots a').removeClass('highlighted');
     $('.slide-indicators .dots a:nth-child(' + slideNum + ')').addClass('highlighted');
     
@@ -244,17 +266,23 @@ var animateFirstSlide = function(){
     // setTimeout(function(){
         // $('.first-slide .play-button').removeClass('animated pulse');
     // }, 1000);
-    $('.main-iphone').css({'left': '-50%'});
-    $('.big-black-band').css({'opacity': '0'});
+    $('.main-iphone').animate({'left': '-50%','opacity':'0'});
+    $('.big-black-band').animate({'opacity': '0'});
     // $('.slide-2-text, .slide-3-text, .slide-4-text').css({'left': '-100%'});
-    $('.screen-2, .screen-3, .screen-4').css({'opacity': '0'});
-    $('.last-slide').css({'z-index': '-1'});
+    // $('.screen-2, .screen-3, .screen-4').css({'opacity': '0'});
+    // $('.last-slide').css({'z-index': '-1'});
+    setTimeout(function(){$('.overlay').css({'z-index': '-1'});},1000);
+    $('.slide-2-text').css({'left': '-100%'});
+    $('.slide-3-text').css({'left': '-200%'});
+    $('.slide-4-text').css({'left': '-300%'});
+    $('.overlay').animate({'left': '-100%'});
 }
 
 var animateSecondSlide = function(){
-    $('.second-slide .black-band').css({'bottom': '100%'});
-    $('.second-slide .black-band').animate({'bottom': '0'}, 1000);
+    // $('.second-slide .black-band').css({'bottom': '100%'});
+    // $('.second-slide .black-band').animate({'bottom': '0'}, 1000);
     // $('.big-black-band').css({'left': '100%'});
+    $('.overlay').animate({'left': '0'});
     $('.big-black-band').css({'left': '0'});
 
     $('.big-black-band').css({'opacity': '0'});
@@ -262,26 +290,27 @@ var animateSecondSlide = function(){
     $('.big-black-band').animate({'opacity': '0.75'});
     $('.slide-2-text').animate({'left': '30%'});
     $('.slide-3-text').animate({'left': '-100%'});
-    $('.slide-4-text').css({'left': '-100%'});
-    $('.main-iphone').css({'left': '-5%', 'margin': '0'});
-    $('.main-iphone').animate({'left': '5%'});
+    $('.slide-4-text').css({'left': '-200%'});
+    // $('.main-iphone').css({'left': '-5%', 'margin': '0'});
+    // $('.main-iphone').animate({'left': '5%'});
     $('.screen-2').css({'opacity': '1'});
     $('.screen-3').animate({'opacity': '0'});
     $('.screen-4').animate({'opacity': '0'});
-    $('.main-iphone').animate({'left': '0'}, 1000);
-    $('.second-slide .iphone').css({'left': '-100%'});
-    $('.second-slide .iphone').animate({'left': '0'}, 1000);
-    $('.last-slide').css({'z-index': '-1'});
+    $('.main-iphone').animate({'left': '0', 'margin': '0','opacity': '1'});
+    // $('.second-slide .iphone').css({'left': '-100%'});
+    // $('.second-slide .iphone').animate({'left': '0'}, 1000);
+    // $('.last-slide').css({'z-index': '-1'});
+    $('.overlay').css({'z-index': '1'});
 }
 
 var animateThirdSlide = function(){
-    $('.third-slide .black-band').css({'bottom': '100%'});
-    $('.third-slide .black-band').animate({'bottom': '0'}, 1000);
+    // $('.third-slide .black-band').css({'bottom': '100%'});
+    // $('.third-slide .black-band').animate({'bottom': '0'}, 1000);
     // $('.big-black-band, .big-black-band .text-band').css({'left': '100%'});
     // $('.big-black-band.third, .big-black-band.third .text-band').css({'left': '0'});
 
-    $('.main-iphone').css({'left': '50%', 'margin-left': $('.main-iphone').width()/2 * -1 + 'px'});
-    $('.big-black-band').css({'opacity': '0.75'});
+    $('.main-iphone').css({'left': '50%', 'opacity': '1', 'margin-left': $('.main-iphone').width()/2 * -1 + 'px'});
+    $('.big-black-band').css({'left': '0', 'opacity': '0.75'});
     $('.big-black-band .text-band').css({'width': '100%'});
     $('.slide-2-text').animate({'left': '100%'});
     $('.slide-3-text').animate({'left': '0'});
@@ -289,39 +318,45 @@ var animateThirdSlide = function(){
     $('.screen-2').animate({'opacity': '0'});
     $('.screen-3').animate({'opacity': '1'});
     $('.screen-4').animate({'opacity': '0'});
-    $('.third-slide .iphone').css({'left': '-100%'});
-    $('.third-slide .iphone').animate({'left': '50%'}, 1000);
-    $('.last-slide').css({'z-index': '-1'});
+    // $('.third-slide .iphone').css({'left': '-100%'});
+    // $('.third-slide .iphone').animate({'left': '50%'}, 1000);
+    // $('.last-slide').css({'z-index': '-1'});
+    $('.overlay').css({'left': '0', 'z-index': '1'});
 }
 
 var animateFourthSlide = function(){
-    $('.image-gallery-slide .black-band').css({'bottom': '100%'});
-    $('.image-gallery-slide .black-band').animate({'bottom': '0'}, 1000);
+    // $('.image-gallery-slide .black-band').css({'bottom': '100%'});
+    // $('.image-gallery-slide .black-band').animate({'bottom': '0'}, 1000);
     // $('.big-black-band, .big-black-band .text-band').css({'left': '100%'});
     // $('.big-black-band.fourth, .big-black-band.fourth .text-band').css({'left': '0'});
 
-    $('.main-iphone').css({'left': '70%', 'margin-left': '0'});
+    $('.main-iphone').css({'left': '70%', 'margin-left': '0','opacity': '1'});
+    $('.slide-2-text').animate({'left': '200%'});
     $('.slide-3-text').animate({'left': '100%'});
     $('.slide-4-text').animate({'left': '5%'});
     $('.screen-2').animate({'opacity': '0'});
     $('.screen-3').animate({'opacity': '0'});
     $('.screen-4').animate({'opacity': '1'});
-    $('.big-black-band').css({'opacity': '0.75'});
+    $('.big-black-band').css({'left': '0', 'opacity': '0.75'});
     $('.big-black-band .text-band').css({'width': '65%'});
-    $('.image-gallery-slide .iphone').css({'right': '-100%'});
-    $('.image-gallery-slide .iphone').animate({'right': '0'}, 1000);
-    $('.last-slide').css({'z-index': '-1'});
+    // $('.image-gallery-slide .iphone').css({'right': '-100%'});
+    // $('.image-gallery-slide .iphone').animate({'right': '0'}, 1000);
+    // $('.last-slide').css({'z-index': '-1'});
+    $('.overlay').css({'left': '0', 'z-index': '-1'});
 }
 
 var animateFifthSlide = function(){
     //$('.last-slide .social-icons').addClass('animated bounceInDown');
     // $('.big-black-band').css({'opacity': '0'});
-
+    $('.overlay').css({'left': '0', 'z-index': '-1'});
     $('.big-black-band').css({'left': '0'});
     $('.main-iphone').css({'left': '100%', 'margin-left': '0'});
     $('.big-black-band').css({'opacity': '0'});
-    $('.slide-2-text, .slide-3-text, .slide-4-text').css({'left': '-100%'});
-    $('.last-slide').css({'z-index': '0'});
+    //$('.slide-2-text, .slide-3-text, .slide-4-text').css({'left': '-100%'});
+    $('.slide-4-text').css({'left': '100%'});
+    $('.slide-3-text').css({'left': '200%'});
+    $('.slide-2-text').css({'left': '300%'});
+    // $('.last-slide').css({'z-index': '0'});
     setTimeout(function(){
         //$('.last-slide .social-icons').removeClass('animated bounceInDown');
         //$('.last-slide .download-link').addClass('animated pulse');
@@ -386,11 +421,11 @@ app.automaticSlideshows = function(){
 app.scrollBlackBar = function(){
     
     if ($('body').scrollTop() >= $(window).height() * 3) {
-        console.log('black bar should not be sticky any more!');
+        // console.log('black bar should not be sticky any more!');
         $('.big-black-band').removeClass('sticky');
         $('.main-iphone').removeClass('sticky');
     } else if ($('body').scrollTop() >= $(window).height()) {
-        console.log('black bar should be sticky');
+        // console.log('black bar should be sticky');
         $('.big-black-band').addClass('sticky');
         $('.main-iphone').addClass('sticky');
     } else if ($('body').scrollTop() < $(window).height()){

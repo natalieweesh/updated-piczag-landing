@@ -16,6 +16,7 @@ body {
   font-family: 'Helvetica Neue', 'Lato', 'Verdana', sans-serif;
 
 }
+
 h2 {
   font-weight: normal;
 
@@ -292,13 +293,20 @@ h2 {
   }
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+}
+
 .main-iphone {
   position: absolute;
   bottom: 20px;
-  left: 70%;
-  left: -50%;
+  left: -100%;
   width: 27%;
-  z-index: 1;
+  z-index: 3;
   max-width: 270px;
   @include transition(all 0.5s);
   height: auto;
@@ -401,7 +409,7 @@ h2 {
 .last-slide-background {
   background: url(../img/background-teal.png) no-repeat center center;
   background-size: cover;
-  position: fixed;
+  //position: fixed;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -411,10 +419,6 @@ h2 {
 
 .last-slide {
   text-align: center;
-  position: fixed;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  z-index: -1;
   width: 100%;
   top: 0;
   left: 0;
@@ -438,20 +442,28 @@ h2 {
   a {
     color: $black;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .social-icons {
     text-align: center;
     margin-bottom: 2em;
+    z-index: 1;
     &> a {
       display: inline-block;
       width: 3em;
-      @include transition(all 0.2s);
+      //@include transition(all 0.2s);
       img {
         width: 100%;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
       }
       &:hover {
-        filter: alpha(opacity=90);
-        opacity: 0.9;
+        img {
+          filter: alpha(opacity=100);
+          opacity: 1;
+        }
       }
     }
   }
